@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type='text/css' href="../../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="./add">add nguoi</a>
+        <% danhsach.forEach(function(actor){ %>
+            <div class="main">
+                <img src="./upload/<%- actor.Image %>" width='150px' height='150px'>
+                <div class="name">
+                    <h3><%- actor.Name %></h1>
+                </div>
+                <div class="level">
+                    <h3><%- actor.Level %></h1>
+                </div>
+               <div class="button">
+                   <a href="./edit/<%- actor._id %>">Edit</a>
+                   <a href="./delete/<%- actor._id %>">delete</a>
+               </div>
+            </div>
+            
+       <% }); %>
+    </div>
+   
+  
+</body>
+</html>
